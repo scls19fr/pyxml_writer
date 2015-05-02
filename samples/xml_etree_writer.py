@@ -16,6 +16,7 @@ from xml.etree.ElementTree import Element
 import xml.etree.ElementTree as etree
 
 def main():
+    filename = 'person.xml'
     root = Element('person')
     tree = ElementTree(root)
     name = Element('name')
@@ -23,7 +24,7 @@ def main():
     name.text = 'Julie'
     root.set('id', '123')
     print etree.tostring(root)
-    tree.write(open('person.xml', 'w'))
+    tree.write(open(filename, 'w'))
 
 if __name__ == "__main__":
     main()
